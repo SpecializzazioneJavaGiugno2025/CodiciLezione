@@ -189,3 +189,53 @@ Metodo Save()
 - In spring non esiste un metodo update
 - L'unico modo che ha per capire se fare una update o una create è tramite l'id
 - Se l'id esiste allora capisce che deve aggiornare, se l'id non esiste capisce che deve creare
+
+
+Best practice per implementazione interfacce
+- Se esiste una unica implementazione di una interfaccia allora è giusto creare una classe scritta in questo modo:
+    <nome della classe>Impl
+
+
+Architetture
+Model->Controller->Service->Repositoryù
+
+Optional -> Oggetto di Schrödinger, finchè non apri la scatola non sai se l'oggetto esiste o no
+
+Controller-> Intercettano le chiamate htttp e le smistano
+Service -> possiedono tutta la logica di business
+
+
+Server side e Client side rendering
+- Client side -> vuol dire che una paginetta html sa renderizzarsi in autonomia, ha tutte le direttive necessarie(es cdn, collegamenti ecc ecc)
+- Server side -> vuol dire che una paginetta html viene prima costruita(rederizzata) lato server e poi viene data al client
+
+Template
+- Sono pagine html dinamiche
+
+Template engine
+- Sono motori di template che ci aiutano nella costruzione di pagine dinamiche
+
+
+<html xmlns:th="http://www.thymeleaf.org">
+- Introduce quello che viene chiamato namespace
+- Mappa su un prefisso th tutte le funzionalità di Thymeleaf
+
+
+SPEL
+- $ -> indica che stiamo manipolando una variabile
+- @ -> indica che verrà manipolato un uri dinamico
+- * -> E' un puntatore specifico verso qualcosa
+
+Thymeleaf
+- th:text -> indica che stiamo manipolandi dei testi
+- th:each -> indica che stiamo utilizzando un foreach
+- th:action -> indica che segue una costruzione di un uri dinamico
+- th:object -> indica che stiamo per specificare un oggetto da manipoalre
+- th:field -> indica che verrà collegato il valore indicato con un attributo specifico del model
+
+
+DAO = MODEL
+
+DTO -> Oggetti utilizzati per il trasferimento di dati seull'http
+    -> Vengono poi trasformati negli oggetti reali presenti nel server e quindi vengono mappati
+    -> Per poter essere mappati esistono vari modi tra cui l'utilizzo d una libreria chiamata model mapper
