@@ -33,6 +33,8 @@
                             <th>Surname</th>
                             <th>Email</th>
                             <th>Fullname</th>
+                            <th>Number of posts</th>
+                            <th>Actions</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -42,6 +44,19 @@
                             <td th:text="${author.surname}"></td>
                             <td th:text="${author.email}"></td>
                             <td th:text="${author.fullname}"></td>
+                            <td th:text="${author.numberOfPosts}"></td>
+                            <td>
+                                <!--link cancella-->
+                                <a th:href="@{/authors/delete/{id}(id=${author.id})}" class="btn btn-danger m-2">
+                                <!--icona del cestino da font awesome-->
+                                <i class="fa-solid fa-trash"></i>
+                                </a>
+                                <!--link modifica-->
+                                <a th:href="@{/authors/edit/{id}(id=${author.id})}" class="btn btn-warning m-2">
+                                <!--icona della penna da font awesome-->
+                                <i class="fa-solid fa-pen"></i>
+                            </a>
+                         </td>   
                         </tr>
                     </tbody>                    
                 </table>
