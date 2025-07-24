@@ -239,3 +239,13 @@ DAO = MODEL
 DTO -> Oggetti utilizzati per il trasferimento di dati seull'http
     -> Vengono poi trasformati negli oggetti reali presenti nel server e quindi vengono mappati
     -> Per poter essere mappati esistono vari modi tra cui l'utilizzo d una libreria chiamata model mapper
+
+
+User Detail
+- Oggettone chiave in spring ssecurity utilizzato per manipolare tutto ciò che concerne l'utente autenticato
+
+Build
+- In una configurazione di sicurezzza tutto ciò che avviene al suo interno è strettamente legato al concetto di costruzione di un qualcosa (build)
+
+XSS
+- Cross site scripting
